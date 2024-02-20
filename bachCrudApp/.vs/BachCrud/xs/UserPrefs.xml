@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{C4019191-A8DD-4E9D-9F2D-3EFE1BB1B0AC}|https">
+  <MonoDevelop.Ide.ItemProperties.BachCrud.Server PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../usr/local/share/dotnet/sdk/7.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets">
+    <Files>
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets" Line="160" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BachCrud" expanded="True" selected="True">
+            <Node name="BachCrud.Client" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

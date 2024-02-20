@@ -1,0 +1,125 @@
+@page "/Student"
+
+@page "/student/{studentId:int}"
+@using BlazorCrud.Shared
+@using BlazorCrud.Client.Services
+@using BachCrud.Client.Services.Contracts
+@inject IStudentServec StudentService;
+@inject ICourseService CousrseService; 
+@inject NavigationManager navigation
+<h3>@title</h3>
+<EditForm Model="student" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group row">
+   
+        <div class="col-md-4">
+            <label  class="form-label">First Name</label>
+            <InputText id="firstName" class="form-control" @bind-Value="student.FirstName"></InputText> 
+        </div>
+       
+        <div class="col-md-4">
+            <label class="form-label">Last Name</label>
+            <InputText id="lastName" class="form-control"  @bind-Value="student.LastName"></InputText> 
+        </div>
+        <div class="form-group row">
+            <div class="col-md-8">
+                <label class="form-label">Email</label>
+                <InputText id="email" class="form-control" @bind-Value="student.Email"></InputText> 
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-4">
+                <label class="form-label">Age</label>
+                <InputNumber id="age"  class="form-control" @bind-Value="student.Age"></InputNumber> 
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Phone number</label>
+                <InputText id="phoneNumber"  class="form-control" @bind-Value="student.PhoneNumber"></InputText> 
+            </div>
+        </div>   
+        
+        <div class="col-md-4">
+            <label class="form-label">Register Date</label> 
+            <InputDate id="Register" class="form-control" @bind-Value="student.RegistrationDate"></InputDate>
+        </div>
+        <div class="col-md-4">
+            
+            <label class="form-label">Courses</label>
+            <InputSelect  class="form-select" @bind-Value="student.CourseId">
+                <option value="0">---Select--- </option>
+                @foreach (var item in listCourseDtos)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            
+            
+            </InputSelect> 
+                    
+
+        </div>
+        
+         
+      
+        
+    </div>
+    <button type="submit" class="btn btn-primary mt-3 me-2">@btnText</button>
+    <a class="btn btn-warning mt-3 me-2" href="/">Back</a>
+   
+</EditForm>
+
+
+
+@code {
+
+    [Parameter]
+    public int studentId { get; set; } = 0;
+
+    string title = string.Empty;
+    string btnText = string.Empty;
+
+    StudentDTO student = new StudentDTO();
+    List<CourseDTO> listCourseDtos = new List<CourseDTO>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (studentId != 0)
+        {
+            student = await StudentService.Search(studentId);
+            btnText = "Update";
+            title = "Update Student";
+
+        }
+        else
+        {
+            student.RegistrationDate = DateTime.Today;
+            btnText = "Save";
+            title = "New Student";
+
+        }
+
+        listCourseDtos = await CousrseService.List();
+
+
+
+    }
+
+    private async Task OnValidSubmit()
+    {
+        int generetedid = 0;
+
+        if (studentId == 0)
+        {
+            generetedid = await StudentService.Save(student); 
+        }
+        else
+        {
+            generetedid = await StudentService.Edit(student); 
+            
+        }
+        if (generetedid != 0)
+        {
+            navigation.NavigateTo("/");
+        }
+    }
+
+}

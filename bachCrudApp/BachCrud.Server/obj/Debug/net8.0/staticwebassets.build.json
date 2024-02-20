@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uM9Y/+BQepI/ElHfKgV2VOWMmP+zHIVKRJsrfdK317Q=",
+  "Source": "BachCrud.Server",
+  "BasePath": "_content/BachCrud.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

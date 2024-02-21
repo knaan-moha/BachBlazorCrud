@@ -21,7 +21,7 @@ jobs:
         dotnet-version: '8.0.101' # Specify the version of .NET you are using
 
     - name: Restore dependencies
-      run: dotnet restore
+      run:  bachCrudApp/BlazorTests/ 
 
     - name: Build
       run: dotnet test ./BlazorTests --no-build --verbosity normal

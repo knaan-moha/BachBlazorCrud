@@ -1,30 +1,22 @@
-name: Run Blazor bUnit Tests
+name: Blazor Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '8.0.101' # Specify the version of .NET you are using
+        dotnet-version: '8.0.101' # specify your dotnet version
 
-    - name: Restore dependencies
-      run:  bachCrudApp/BlazorTests/ 
+    - name: Restore dependencies for BlazorTests
+      run: dotnet restore ./BlazorTests/BlazorTests.csproj
 
-    - name: Build
-      run: dotnet test ./BlazorTests --no-build --verbosity normal
-
-    - name: Run tests
-      run: dotnet test ./BlazorTests --no-build --verbosity normal
+    - name: Run BlazorTests
+      run: dotnet test ./BlazorTests/BlazorTests.csproj --no-restore --verbosity normal

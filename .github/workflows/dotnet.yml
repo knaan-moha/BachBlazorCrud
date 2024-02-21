@@ -20,4 +20,4 @@ jobs:
       
 
     - name: Run BlazorTests
-      run: dotnet test ./BlazorTests/BlazorTests.csproj --no-restore --verbosity normal
+      run: dotnet test bachCrudApp/BlazorTests/BlazorTests.csproj --no-restore --verbosity normal

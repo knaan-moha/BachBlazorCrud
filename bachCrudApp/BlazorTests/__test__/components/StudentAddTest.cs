@@ -17,7 +17,7 @@ public class StudentAddTest : TestContext
     public async Task ShouldAddStudent()
     {
         // mocking the service for the student and courses 
-        var mockStudentService = new Mock<IStudentServec>();
+        var mockStudentService = new Mock<IStudentService>();
         var mockCourseService = new Mock<ICourseService>();
 
         mockCourseService.Setup(service => service.List()).ReturnsAsync(new List<CourseDTO>
@@ -34,7 +34,7 @@ public class StudentAddTest : TestContext
         // register for instance of the service 
 
         using var ctx = new TestContext();
-        ctx.Services.AddSingleton<IStudentServec>(mockStudentService.Object);
+        ctx.Services.AddSingleton<IStudentService>(mockStudentService.Object);
         ctx.Services.AddSingleton<ICourseService>(mockCourseService.Object); 
         
         // act 

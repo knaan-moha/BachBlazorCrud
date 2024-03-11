@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jtKVL3UCp/n3ZMc2PF1m1ur0h8+9h6VUTdCidolMB7o+bH6QgIRfkiRjlqAa2fMVc/DSmdnyeI37BBU9lXmFWA==",
+  "dgSpecHash": "1GvKy86DOhBie2kbeo0iU1nwgviD0+K18sBqE5Sd9/kdVkG9P7tHYEyAPEUZ8VWtOAy80FxQeVxZG4EBCBjsuw==",
   "success": true,
   "projectFilePath": "/Users/zekariamohamed/SideProjects/BachProBlazor/bachCrudApp/BlazorTests/BlazorTests.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "/Users/zekariamohamed/.nuget/packages/bunit.web/1.27.11-preview/bunit.web.1.27.11-preview.nupkg.sha512",
     "/Users/zekariamohamed/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/zekariamohamed/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/zekariamohamed/.nuget/packages/coverlet.msbuild/6.0.1/coverlet.msbuild.6.0.1.nupkg.sha512",
     "/Users/zekariamohamed/.nuget/packages/microsoft.aspnetcore.authorization/8.0.2/microsoft.aspnetcore.authorization.8.0.2.nupkg.sha512",
     "/Users/zekariamohamed/.nuget/packages/microsoft.aspnetcore.components/8.0.2/microsoft.aspnetcore.components.8.0.2.nupkg.sha512",
     "/Users/zekariamohamed/.nuget/packages/microsoft.aspnetcore.components.analyzers/8.0.2/microsoft.aspnetcore.components.analyzers.8.0.2.nupkg.sha512",

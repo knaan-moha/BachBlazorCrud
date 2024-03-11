@@ -16,14 +16,14 @@ public class StudentComponentTests : TestContext
     
     public StudentComponentTests()
     {
-        var mockStudentService = new Mock<IStudentServec>(); 
+        var mockStudentService = new Mock<IStudentService>(); 
         
  
         mockStudentService.Setup(service => service.AllStudents()).ReturnsAsync(new List<StudentDTO>());
         mockStudentService.Setup(service => service.Delete(It.IsAny<int>())).ReturnsAsync(true);
 
 
-        Services.AddSingleton<IStudentServec>(mockStudentService.Object); 
+        Services.AddSingleton<IStudentService>(mockStudentService.Object); 
         
     }
 
@@ -49,7 +49,7 @@ public class StudentComponentTests : TestContext
     public void StudentListComponentRendersCorrectly()
     {
         // Arrange
-        var mockStudentService = new Mock<IStudentServec>();
+        var mockStudentService = new Mock<IStudentService>();
         var mockStudents = new List<StudentDTO>
         {
             new StudentDTO { Id = 1, FirstName = "Zekaria", LastName = "Mohamed", Age = 26, CourseDto = new CourseDTO { Name = "IKT-206" }, RegistrationDate = new DateTime(2022, 1, 1) },
@@ -58,7 +58,7 @@ public class StudentComponentTests : TestContext
         };
 
         mockStudentService.Setup(service => service.AllStudents()).ReturnsAsync(mockStudents);
-        Services.AddSingleton<IStudentServec>(mockStudentService.Object);
+        Services.AddSingleton<IStudentService>(mockStudentService.Object);
 
         // Act
         var component = RenderComponent<Students>();
@@ -84,7 +84,7 @@ public class StudentComponentTests : TestContext
     public async Task AddStudentTest()
     {
         // Arrange
-        var mockStudentService = new Mock<IStudentServec>();
+        var mockStudentService = new Mock<IStudentService>();
         var mockCourseService = new Mock<ICourseService>();
         mockCourseService.Setup(service => service.List()).ReturnsAsync(new List<CourseDTO>
         {
@@ -98,7 +98,7 @@ public class StudentComponentTests : TestContext
             .ReturnsAsync(expectedId);
 
         using var ctx = new TestContext();
-        ctx.Services.AddSingleton<IStudentServec>(mockStudentService.Object);
+        ctx.Services.AddSingleton<IStudentService>(mockStudentService.Object);
         ctx.Services.AddSingleton<ICourseService>(mockCourseService.Object);
 
         // Act
@@ -140,9 +140,64 @@ public class StudentComponentTests : TestContext
     }
 
     [Fact]
-    public async Task UpadetStuddnt()
+     public async Task ShouldUpdateStudent()
     {
+        // Arrange
+        var mockStudentService = new Mock<IStudentService>();
+        var mockCourseService = new Mock<ICourseService>();
+        var existingStudent = new StudentDTO
+        {
+            Id = 1,
+            FirstName = "Original",
+            LastName = "Student",
+            Email = "original@student.com",
+            PhoneNumber = "1234567890",
+            Age = 20,
+            CourseId = 2,
+            RegistrationDate = DateTime.Today.AddDays(-10)
+        };
+
+        mockCourseService.Setup(service => service.List()).ReturnsAsync(new List<CourseDTO>
+        {
+            new CourseDTO { Id = 1, Name = "IKT206" },
+            new CourseDTO { Id = 2, Name = "IKT205" }
+        });
+
+        mockStudentService.Setup(service => service.Search(existingStudent.Id)).ReturnsAsync(existingStudent);
+        mockStudentService.Setup(service => service.Edit(It.IsAny<StudentDTO>())).ReturnsAsync(existingStudent.Id);
         
+        Services.AddSingleton<IStudentService>(mockStudentService.Object);
+        Services.AddSingleton<ICourseService>(mockCourseService.Object);
+
+        // Act
+        var component = RenderComponent<Student>(parameters => parameters.Add(p => p.studentId, existingStudent.Id));
+        
+        component.Find("#firstName").Change("Updated");
+        component.Find("#lastName").Change("Student");
+        component.Find("#email").Change("updated@student.com");
+        component.Find("#phoneNumber").Change("0987654321");
+        component.Find("#age").Change(21);
+        component.Find("select").Change("1"); // Assuming changing the course
+        component.Find("#Register").Change(DateTime.Today.ToString("yyyy-MM-dd"));
+        
+        component.Find("button[type='submit']").Click();
+
+        // Assert
+        mockStudentService.Verify(service => service.Edit(It.Is<StudentDTO>(s =>
+                s.Id == existingStudent.Id &&
+                s.FirstName == "Updated" &&
+                s.LastName == "Student" &&
+                s.Email == "updated@student.com" &&
+                s.PhoneNumber == "0987654321" &&
+                s.Age == 21 &&
+                s.CourseId == 1 &&
+                s.RegistrationDate == DateTime.Today)),
+            Times.Once);
+        
+        var navManger = Services.GetRequiredService<NavigationManager>();
+        var expectedUri = "/";
+        var actualUri = new Uri(navManger.Uri).PathAndQuery; 
+        Assert.Equal(expectedUri, actualUri);
     }
     
     

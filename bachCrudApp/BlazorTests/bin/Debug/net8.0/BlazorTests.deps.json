@@ -13,6 +13,7 @@
           "Moq": "4.20.70",
           "bunit": "1.27.11-preview",
           "coverlet.collector": "6.0.0",
+          "coverlet.msbuild": "6.0.1",
           "xunit": "2.4.2",
           "xunit.runner.visualstudio": "2.4.5"
         },
@@ -105,6 +106,7 @@
         }
       },
       "coverlet.collector/6.0.0": {},
+      "coverlet.msbuild/6.0.1": {},
       "Microsoft.AspNetCore.Authorization/8.0.2": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "8.0.2",
@@ -1544,6 +1546,13 @@
       "sha512": "sha512-tW3lsNS+dAEII6YGUX/VMoJjBS1QvsxqJeqLaJXub08y1FSjasFPtQ4UBUsudE9PNrzLjooClMsPtY2cZLdXpQ==",
       "path": "coverlet.collector/6.0.0",
       "hashPath": "coverlet.collector.6.0.0.nupkg.sha512"
+    },
+    "coverlet.msbuild/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3XB8lTS4olP+ofINp2Zjf7N6d/F5ZCeTTa6uHauKEZhPWvD2eJuhW7GHclKBeTC1dL/G7hdfekTQrsLgE3oGFQ==",
+      "path": "coverlet.msbuild/6.0.1",
+      "hashPath": "coverlet.msbuild.6.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/8.0.2": {
       "type": "package",

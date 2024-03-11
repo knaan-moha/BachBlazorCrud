@@ -162,10 +162,6 @@ namespace BachCrud.Server.Controllers
         {
             var responseApi = new ResponseAPI<int>(); 
             
-            
-
-
-
 
             try
             {

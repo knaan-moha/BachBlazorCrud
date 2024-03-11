@@ -10,3 +10,15 @@
 /Users/zekariamohamed/myprojects/csharpProjects/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.pdb
 /Users/zekariamohamed/myprojects/csharpProjects/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/ref/BachCrud.Shared.dll
 /Users/zekariamohamed/myprojects/csharpProjects/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.sourcelink.json
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/bin/Debug/net7.0/BachCrud.Shared.deps.json
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/bin/Debug/net7.0/BachCrud.Shared.dll
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/bin/Debug/net7.0/BachCrud.Shared.pdb
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.AssemblyInfoInputs.cache
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.AssemblyInfo.cs
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.csproj.CoreCompileInputs.cache
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.sourcelink.json
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.dll
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/refint/BachCrud.Shared.dll
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/BachCrud.Shared.pdb
+/Users/zekariamohamed/myprojects/csharpProjects/BachProBalzor/bachCrudApp/BachCrud.Shared/obj/Debug/net7.0/ref/BachCrud.Shared.dll

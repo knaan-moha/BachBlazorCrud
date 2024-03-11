@@ -16,22 +16,25 @@ public class StudentComponentTests : TestContext
     
     public StudentComponentTests()
     {
-        var mockStudentService = new Mock<IStudentServec>(); // Corrected to IStudentService
+        var mockStudentService = new Mock<IStudentServec>(); 
         
-        // Setup your mock with desired behavior
+ 
         mockStudentService.Setup(service => service.AllStudents()).ReturnsAsync(new List<StudentDTO>());
         mockStudentService.Setup(service => service.Delete(It.IsAny<int>())).ReturnsAsync(true);
 
-        // Register the mock service with bUnit's test service provider
-        Services.AddSingleton<IStudentServec>(mockStudentService.Object); // Corrected to IStudentService
+
+        Services.AddSingleton<IStudentServec>(mockStudentService.Object); 
+        
     }
 
     [Fact]
     public void AddButtonShouldDisplay()
     {
-        // The incorrect registration line has been removed
-
-        var component = RenderComponent<Students>();
+        var component = RenderComponent<Students>(); 
+        
+        
+        // finding the s 
+        
 
         // Act: Try to find the "New Student" button
         var addNewStudentButton = component.Find("a.btn.btn-success");
@@ -90,7 +93,7 @@ public class StudentComponentTests : TestContext
           
         });
 
-        int expectedId = 1; // Assuming the service returns 1 as the new student's ID
+        int expectedId = 1; 
         mockStudentService.Setup(service => service.Save(It.IsAny<StudentDTO>()))
             .ReturnsAsync(expectedId);
 
@@ -99,7 +102,7 @@ public class StudentComponentTests : TestContext
         ctx.Services.AddSingleton<ICourseService>(mockCourseService.Object);
 
         // Act
-        var component = ctx.RenderComponent<Student>(); // Replace 'Student' with your actual component name
+        var component = ctx.RenderComponent<Student>(); 
        
         
         component.Find("#firstName").Change("Kate");
@@ -134,6 +137,12 @@ public class StudentComponentTests : TestContext
         var expectedUri = "/";
         var actualUri = new Uri(navManager.Uri).PathAndQuery; // This extracts the path and query from the full URI
         Assert.Equal(expectedUri, actualUri);
+    }
+
+    [Fact]
+    public async Task UpadetStuddnt()
+    {
+        
     }
     
     

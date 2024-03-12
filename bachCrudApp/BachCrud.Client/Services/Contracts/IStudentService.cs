@@ -4,7 +4,7 @@ using BlazorCrud.Shared;
 
 namespace BlazorCrud.Client.Services;
 
-public interface IStudentServec
+public interface IStudentService
 {
     Task<List<StudentDTO>> AllStudents();
 

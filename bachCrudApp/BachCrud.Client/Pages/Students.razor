@@ -1,7 +1,7 @@
 @page "/"
 @using BlazorCrud.Client.Services
 @using BlazorCrud.Shared
-@inject IStudentServec StudentServec;
+@inject IStudentService StudentService;
 
 @if (listStudnts == null)
 {
@@ -75,16 +75,16 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        listStudnts = await StudentServec.AllStudents();
+        listStudnts = await StudentService.AllStudents();
     }
 
     public async Task DeleteStudent(int id)
     {
-        var result = await StudentServec.Delete(id);
+        var result = await StudentService.Delete(id);
 
         if (result)
         {
-            listStudnts = await StudentServec.AllStudents();
+            listStudnts = await StudentService.AllStudents();
         }
 
     }

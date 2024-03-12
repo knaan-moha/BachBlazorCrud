@@ -4,7 +4,7 @@ using BlazorCrud.Shared;
 
 namespace BachCrud.Client.Services;
 
-public class StudentService : IStudentServec
+public class StudentService : IStudentService
 {
     private readonly HttpClient _httpClient;
 

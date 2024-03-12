@@ -10,7 +10,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://blazorcrud-server.azurewebsites.net") });
-builder.Services.AddScoped<IStudentServec, StudentService>();
+builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 
 await builder.Build().RunAsync();

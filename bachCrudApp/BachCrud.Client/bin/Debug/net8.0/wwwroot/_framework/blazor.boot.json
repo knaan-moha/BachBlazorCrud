@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BachCrud.Client",
   "resources": {
-    "hash": "sha256-x7jZ83zijEibeVa7e2btH1UOLLNUfnmjMPoSOGOeQP4=",
+    "hash": "sha256-14jAUjJh6zwQVHj8Usq00ZSIkV/nSCmAmFPytAZsfM8=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.0lnbe73d1p.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -208,12 +208,12 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "BachCrud.Shared.wasm": "sha256-qjSLdXdMYrjD/99C30UPJ7YMU5VIdBGMRIJIGFiugb8=",
-      "BachCrud.Client.wasm": "sha256-QJg3aJJPPGTvuDOrNgkpqbXbaWCEttW18UzE3I3HCJw="
+      "BachCrud.Shared.wasm": "sha256-rc7ySdczSE0RrLsiAAWniuQcioEpU1khFBFvrS0UHH4=",
+      "BachCrud.Client.wasm": "sha256-F4EFNEurWVhlb/bTi84ani2rXMnZJtkPzNMXW6gSZrE="
     },
     "pdb": {
-      "BachCrud.Shared.pdb": "sha256-S2YKKJFMoog9JJ4GH6VkNKp++o6bNjEXL+HpSWqUhoU=",
-      "BachCrud.Client.pdb": "sha256-qzRSpbT5v9IFWZPoX8/c3VP9OmQ7M+kla4ty1KuMBPw="
+      "BachCrud.Shared.pdb": "sha256-ti1WXU+vbrcINQevZ3G2aiaEUQPfJziXdUCX0IRC0dc=",
+      "BachCrud.Client.pdb": "sha256-2u7rr2eJxnmEgU7Uylep9cdmhxoPN50tMVZQNgyE4wo="
     }
   },
   "cacheBootResources": true,

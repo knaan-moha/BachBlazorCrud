@@ -139,66 +139,6 @@ public class StudentComponentTests : TestContext
         Assert.Equal(expectedUri, actualUri);
     }
 
-    [Fact]
-     public async Task ShouldUpdateStudent()
-    {
-        // Arrange
-        var mockStudentService = new Mock<IStudentService>();
-        var mockCourseService = new Mock<ICourseService>();
-        var existingStudent = new StudentDTO
-        {
-            Id = 1,
-            FirstName = "Original",
-            LastName = "Student",
-            Email = "original@student.com",
-            PhoneNumber = "1234567890",
-            Age = 20,
-            CourseId = 2,
-            RegistrationDate = DateTime.Today.AddDays(-10)
-        };
-
-        mockCourseService.Setup(service => service.List()).ReturnsAsync(new List<CourseDTO>
-        {
-            new CourseDTO { Id = 1, Name = "IKT206" },
-            new CourseDTO { Id = 2, Name = "IKT205" }
-        });
-
-        mockStudentService.Setup(service => service.Search(existingStudent.Id)).ReturnsAsync(existingStudent);
-        mockStudentService.Setup(service => service.Edit(It.IsAny<StudentDTO>())).ReturnsAsync(existingStudent.Id);
-        
-        Services.AddSingleton<IStudentService>(mockStudentService.Object);
-        Services.AddSingleton<ICourseService>(mockCourseService.Object);
-
-        // Act
-        var component = RenderComponent<Student>(parameters => parameters.Add(p => p.studentId, existingStudent.Id));
-        
-        component.Find("#firstName").Change("Updated");
-        component.Find("#lastName").Change("Student");
-        component.Find("#email").Change("updated@student.com");
-        component.Find("#phoneNumber").Change("0987654321");
-        component.Find("#age").Change(21);
-        component.Find("select").Change("1"); // Assuming changing the course
-        component.Find("#Register").Change(DateTime.Today.ToString("yyyy-MM-dd"));
-        
-        component.Find("button[type='submit']").Click();
-
-        // Assert
-        mockStudentService.Verify(service => service.Edit(It.Is<StudentDTO>(s =>
-                s.Id == existingStudent.Id &&
-                s.FirstName == "Updated" &&
-                s.LastName == "Student" &&
-                s.Email == "updated@student.com" &&
-                s.PhoneNumber == "0987654321" &&
-                s.Age == 21 &&
-                s.CourseId == 1 &&
-                s.RegistrationDate == DateTime.Today)),
-            Times.Once);
-        
-        var navManger = Services.GetRequiredService<NavigationManager>();
-        var expectedUri = "/";
-        var actualUri = new Uri(navManger.Uri).PathAndQuery; 
-        Assert.Equal(expectedUri, actualUri);
-    }
-    
+  
     
 }

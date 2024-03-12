@@ -39,6 +39,8 @@ public class StudentUpdateTest : TestContext
         mockStudentService.Setup(service => service.Search(existingStudent.Id)).ReturnsAsync(existingStudent);
         mockStudentService.Setup(service => service.Edit(It.IsAny<StudentDTO>())).ReturnsAsync(existingStudent.Id);
         
+        
+        
         Services.AddSingleton<IStudentService>(mockStudentService.Object);
         Services.AddSingleton<ICourseService>(mockCourseService.Object);
 

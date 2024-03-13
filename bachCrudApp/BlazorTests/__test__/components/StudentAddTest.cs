@@ -12,8 +12,7 @@ using Xunit;
 
 public class StudentAddTest : TestContext
 {
-
-   // [Fact]
+   [Fact]
     public async Task ShouldAddStudent()
     {
         // mocking the service for the student and courses 
@@ -32,7 +31,6 @@ public class StudentAddTest : TestContext
         
         
         // register for instance of the service 
-
         using var ctx = new TestContext();
         ctx.Services.AddSingleton<IStudentService>(mockStudentService.Object);
         ctx.Services.AddSingleton<ICourseService>(mockCourseService.Object); 
@@ -50,7 +48,8 @@ public class StudentAddTest : TestContext
 
         // finding the submit button 
         
-        component.Find("button[type='submit]").Click();
+        component.Find("button[type='submit']").Click();
+
         
         
         // making verifying with Assert 
@@ -76,5 +75,4 @@ public class StudentAddTest : TestContext
         
     }
     
-
 }

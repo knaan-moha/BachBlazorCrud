@@ -42,11 +42,11 @@ else
                     <td>@item.CourseDto!.Name</td>
                     <td>@item.RegistrationDate.ToString("dd.MM.yyyy")</td>
                     <td>
-                        <a class="btn btn-primary btn-sm  ms-sm-2 me-1" href="student/@item.Id">
+                        <a class="btn btn-primary btn-sm" href="student/@item.Id">
                             <i class="bi bi-pencil-fill"></i>
                            
                         </a>
-                         <button type="button" class="btn btn-danger btn-sm ms-sm-2 me-1" @onclick="(() => DeleteStudent(item.Id))">
+                         <button type="button" class="btn btn-danger btn-sm ms-2 ml-2" @onclick="(() => DeleteStudent(item.Id))">
                              <i class="bi bi-trash"></i>
                              </button>
                     </td>

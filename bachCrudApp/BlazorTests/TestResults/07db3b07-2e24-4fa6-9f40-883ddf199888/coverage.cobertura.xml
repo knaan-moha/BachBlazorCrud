@@ -24,7 +24,7 @@
             <line number="6" hits="38" branch="False" />
           </lines>
         </class>
-        <class name="BlazorCrud.Shared.ResponseAPI`1" filename="BachCrud.Shared/ResponseAPI.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="BlazorCrud.Shared.ResponseApi`1" filename="BachCrud.Shared/ResponseApi.cs" line-rate="0" branch-rate="1" complexity="3">
           <methods>
             <method name="get_IsSuccess" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>

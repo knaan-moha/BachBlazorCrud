@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BachCrud.Shared;
 using BlazorCrud.Shared;
 
 namespace BlazorCrud.Client.Services;

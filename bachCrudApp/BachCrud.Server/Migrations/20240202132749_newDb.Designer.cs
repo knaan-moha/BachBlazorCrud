@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BachCrud.Server.Migrations
 {
-    [DbContext(typeof(ApplictionDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240202132749_newDb")]
     partial class newDb
     {

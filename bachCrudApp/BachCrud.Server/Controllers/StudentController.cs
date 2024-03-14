@@ -1,4 +1,5 @@
 using BachCrud.Server.Models;
+using BachCrud.Shared;
 using BlazorCrud.Server.Respositories;
 using BlazorCrud.Shared;
 using Microsoft.AspNetCore.Mvc;
@@ -22,12 +23,12 @@ namespace BachCrud.Server.Controllers
         [Route("AllStudents")]
         public async Task<IActionResult> AllStudents()
         {
-            var responseApi = new ResponseAPI<List<StudentDTO>>();
+            var responseApi = new ResponseApi<List<StudentDTO>>();
             try
             {
                 var students = await _studentRepository.GetStudents();
                 // make linkQ to iteret over and convert to list 
-                var studenDTOList = students.Select(item => new StudentDTO
+                var studentDtoList = students.Select(item => new StudentDTO
                 {
                     
                     Id = item.Id, 
@@ -47,7 +48,7 @@ namespace BachCrud.Server.Controllers
                 }).ToList();
 
                 responseApi.IsSuccess = true;
-                responseApi.Value = studenDTOList; 
+                responseApi.Value = studentDtoList; 
             }
             catch (Exception e)
             {
@@ -65,7 +66,7 @@ namespace BachCrud.Server.Controllers
         public async Task<IActionResult> Save(StudentDTO studentDto)
         {
 
-            var responsAPi = new ResponseAPI<int>();
+            var responsAPi = new ResponseApi<int>();
 
             try
             {
@@ -82,7 +83,7 @@ namespace BachCrud.Server.Controllers
                     
                 };
                 await _studentRepository.AddStudent(studentDb); 
-                _studentRepository.SaveChangesAsync();
+                await _studentRepository.SaveChangesAsync();
                 
                 
                 // check if the id 
@@ -112,8 +113,8 @@ namespace BachCrud.Server.Controllers
         [Route("Search/{id:int}")]
         public async Task<IActionResult> Search(int id)
         {
-            var responseApi = new ResponseAPI<StudentDTO>();
-            var studenDto = new StudentDTO();
+            var responseApi = new ResponseApi<StudentDTO>();
+            var studentDto = new StudentDTO();
             
             
             try
@@ -125,23 +126,23 @@ namespace BachCrud.Server.Controllers
 
                 if (studentDb.Id!= null)
                 {
-                    studenDto.Id = studentDb.Id;
-                    studenDto.FirstName = studentDb.FirstName;
-                    studenDto.LastName = studentDb.LastName;
-                    studenDto.Email = studentDb.Email;
-                    studenDto.Age = studentDb.Age;
-                    studenDto.PhoneNumber = studentDb.PhoneNumber;
-                    studenDto.RegistrationDate = studentDb.RegistrationDate;
-                    studenDto.CourseId = studentDb.CourseId;
+                    studentDto.Id = studentDb.Id;
+                    studentDto.FirstName = studentDb.FirstName;
+                    studentDto.LastName = studentDb.LastName;
+                    studentDto.Email = studentDb.Email;
+                    studentDto.Age = studentDb.Age;
+                    studentDto.PhoneNumber = studentDb.PhoneNumber;
+                    studentDto.RegistrationDate = studentDb.RegistrationDate;
+                    studentDto.CourseId = studentDb.CourseId;
 
 
                     responseApi.IsSuccess = true;
-                    responseApi.Value = studenDto; 
+                    responseApi.Value = studentDto; 
                 }
                 else
                 {
                     responseApi.IsSuccess = false;
-                    responseApi.Message = "Not found Users reacord!";
+                    responseApi.Message = "Not found Users record!";
                 }
 
             }
@@ -160,7 +161,7 @@ namespace BachCrud.Server.Controllers
         [Route("Edit/{id:int}")]
         public async Task<IActionResult> Edit(StudentDTO studentDto, int id)
         {
-            var responseApi = new ResponseAPI<int>(); 
+            var responseApi = new ResponseApi<int>(); 
             
 
             try
@@ -182,7 +183,7 @@ namespace BachCrud.Server.Controllers
                     studentDb.PhoneNumber = studentDto.PhoneNumber;
                     
                     await _studentRepository.UpdateStudent(studentDb); 
-                    _studentRepository.SaveChangesAsync();
+                    await _studentRepository.SaveChangesAsync();
                     
 
 
@@ -211,12 +212,10 @@ namespace BachCrud.Server.Controllers
         
         [HttpDelete]
         [Route("Delete/{id:int}")]
-        public async Task<IActionResult> Delete(
-            
-            int id)
+        public async Task<IActionResult> Delete(int id)
         {
 
-            var reponseApi = new ResponseAPI<int>();
+            var responseApi = new ResponseApi<int>();
 
             try
             {
@@ -226,24 +225,24 @@ namespace BachCrud.Server.Controllers
                   await  _studentRepository.DeleteStudents(studentDb);
                   await _studentRepository.SaveChangesAsync();
 
-                  reponseApi.IsSuccess = true;
+                  responseApi.IsSuccess = true;
 
                 }
                 else
                 {
-                    reponseApi.IsSuccess = false;
-                    reponseApi.Message = "Student record not found!";
+                    responseApi.IsSuccess = false;
+                    responseApi.Message = "Student record not found!";
                 }
             }
             catch (Exception e)
             {
-                reponseApi.IsSuccess = false;
-                reponseApi.Message = e.Message; 
+                responseApi.IsSuccess = false;
+                responseApi.Message = e.Message; 
 
             }
             
             
-            return reponseApi.IsSuccess? Ok(reponseApi) : BadRequest(reponseApi); 
+            return responseApi.IsSuccess? Ok(responseApi) : BadRequest(responseApi); 
 
         }
         

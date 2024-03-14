@@ -1,18 +1,20 @@
 using BachCrud.Client.Pages;
 using BachCrud.Client.Services.Contracts;
-using Bunit;
-using Moq;
+using BachCrud.Shared;
 using BlazorCrud.Client.Services;
-// Assuming the correct namespace
 using BlazorCrud.Shared;
+using Bunit;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
+using Moq;
+// Assuming the correct namespace
 
+
+namespace BlazorTests.__test__.components;
 
 public class StudentAddTest : TestContext
 {
-   [Fact]
+    [Fact]
     public async Task ShouldAddStudent()
     {
         // mocking the service for the student and courses 
@@ -55,13 +57,13 @@ public class StudentAddTest : TestContext
         // making verifying with Assert 
         
         mockStudentService.Verify(service=> service.Save(It.Is<StudentDTO>(s=>
-            s.FirstName == "Kate" &&
-            s.LastName == "Test" &&
-            s.Email == "teste@uia.no" &&
-            s.PhoneNumber == "486768" && 
-            s.Age == 23  &&
-            s.CourseId == 1 &&
-            s.RegistrationDate == DateTime.Today.Date
+                s.FirstName == "Kate" &&
+                s.LastName == "Test" &&
+                s.Email == "teste@uia.no" &&
+                s.PhoneNumber == "486768" && 
+                s.Age == 23  &&
+                s.CourseId == 1 &&
+                s.RegistrationDate == DateTime.Today.Date
             
             )), 
             

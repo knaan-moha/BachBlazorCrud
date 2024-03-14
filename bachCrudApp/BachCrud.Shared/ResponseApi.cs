@@ -1,6 +1,6 @@
-namespace BlazorCrud.Shared;
+namespace BachCrud.Shared;
 
-public class ResponseAPI<T>
+public class ResponseApi<T>
 {
 
     public bool IsSuccess { get; set; }

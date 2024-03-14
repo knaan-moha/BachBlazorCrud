@@ -11,9 +11,9 @@ public class StudentRepository : IStudentRepository
 {
 
 
-    private readonly ApplictionDbContext _dbContext;
+    private readonly ApplicationDbContext _dbContext;
 
-    public StudentRepository(ApplictionDbContext dbContext)
+    public StudentRepository(ApplicationDbContext dbContext)
     {
         _dbContext = dbContext; 
     }

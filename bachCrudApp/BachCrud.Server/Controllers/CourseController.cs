@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BachCrud.Shared;
 using BlazorCrud.Server.Respositories;
 using BlazorCrud.Shared;
 using Microsoft.AspNetCore.Http;
@@ -29,7 +30,7 @@ namespace BlazorCrud.Server.Controllers
         public async Task<IActionResult> AllCourses()
         {
 
-            var responseAPi = new ResponseAPI<System.Collections.Generic.List<CourseDTO>>();
+            var responseAPi = new ResponseApi<System.Collections.Generic.List<CourseDTO>>();
            
 
 

@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BachCrud.Server.Data;
 
-public class ApplictionDbContext : DbContext
+public class ApplicationDbContext : DbContext
 {
-    public ApplictionDbContext(DbContextOptions<ApplictionDbContext> options) : base(options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
         
     }

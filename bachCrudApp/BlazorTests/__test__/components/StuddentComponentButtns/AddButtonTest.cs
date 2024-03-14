@@ -1,4 +1,5 @@
 using BachCrud.Client.Pages;
+using BachCrud.Shared;
 using BlazorCrud.Client.Services;
 using BlazorCrud.Shared;
 using Bunit;

@@ -6,9 +6,9 @@ namespace BlazorCrud.Server.Respositories;
 
 public class CourseRepository : ICourseRepository
 {
-    private readonly ApplictionDbContext _dbContext;
+    private readonly ApplicationDbContext _dbContext;
 
-    public CourseRepository(ApplictionDbContext dbContext)
+    public CourseRepository(ApplicationDbContext dbContext)
     {
         _dbContext = dbContext; 
     }

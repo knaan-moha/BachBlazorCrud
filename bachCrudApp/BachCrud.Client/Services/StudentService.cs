@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using BachCrud.Shared;
 using BlazorCrud.Client.Services;
 using BlazorCrud.Shared;
 
@@ -19,7 +20,7 @@ public class StudentService : IStudentService
     {
 
 
-        var result = await _httpClient.GetFromJsonAsync<ResponseAPI<List<StudentDTO>>>("api/Student/AllStudents");
+        var result = await _httpClient.GetFromJsonAsync<ResponseApi<List<StudentDTO>>>("api/Student/AllStudents");
 
 
         if (result!.IsSuccess)
@@ -35,7 +36,7 @@ public class StudentService : IStudentService
 
     public async Task<StudentDTO> Search(int id)
     {
-        var result = await _httpClient.GetFromJsonAsync<ResponseAPI<StudentDTO>>($"api/Student/Search/{id}");
+        var result = await _httpClient.GetFromJsonAsync<ResponseApi<StudentDTO>>($"api/Student/Search/{id}");
         if (result!.IsSuccess)
         {
             return result.Value!; 
@@ -51,7 +52,7 @@ public class StudentService : IStudentService
     public async Task<int> Save(StudentDTO studentDto)
     {
         var result = await _httpClient.PostAsJsonAsync("api/Student/Save", studentDto);
-        var response = await result.Content.ReadFromJsonAsync < ResponseAPI<int>>();
+        var response = await result.Content.ReadFromJsonAsync < ResponseApi<int>>();
 
         if (response!.IsSuccess)
         {
@@ -66,7 +67,7 @@ public class StudentService : IStudentService
     public async Task<int> Edit(StudentDTO studentDto)
     {
         var result = await _httpClient.PutAsJsonAsync($"api/Student/Edit/{studentDto.Id}", studentDto);
-        var response = await result.Content.ReadFromJsonAsync<ResponseAPI<int>>();
+        var response = await result.Content.ReadFromJsonAsync<ResponseApi<int>>();
 
         if (response!.IsSuccess)
         {
@@ -90,7 +91,7 @@ public class StudentService : IStudentService
         }
         else
         {
-            var responseApi = await result.Content.ReadFromJsonAsync<ResponseAPI<int>>();
+            var responseApi = await result.Content.ReadFromJsonAsync<ResponseApi<int>>();
             responseApi!.Message= "An error occurred while trying to delete the student";
             return false;
         }

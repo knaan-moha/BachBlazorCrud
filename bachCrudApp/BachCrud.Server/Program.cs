@@ -26,7 +26,7 @@ builder.Services.AddSingleton<BlobServiceClient>(serviceProvider =>
 // Connection To db 
 
 
-builder.Services.AddDbContext<ApplictionDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>(); 

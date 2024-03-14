@@ -1,4 +1,5 @@
 using BachCrud.Server.Models;
+using BachCrud.Shared;
 using BlazorCrud.Server.Respositories;
 using BlazorCrud.Shared;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,7 @@ namespace BachCrud.Server.Controllers
         [Route("AllStudents")]
         public async Task<IActionResult> AllStudents()
         {
-            var responseApi = new ResponseAPI<List<StudentDTO>>();
+            var responseApi = new ResponseApi<List<StudentDTO>>();
             try
             {
                 var students = await _studentRepository.GetStudents();
@@ -65,7 +66,7 @@ namespace BachCrud.Server.Controllers
         public async Task<IActionResult> Save(StudentDTO studentDto)
         {
 
-            var responsAPi = new ResponseAPI<int>();
+            var responsAPi = new ResponseApi<int>();
 
             try
             {
@@ -112,7 +113,7 @@ namespace BachCrud.Server.Controllers
         [Route("Search/{id:int}")]
         public async Task<IActionResult> Search(int id)
         {
-            var responseApi = new ResponseAPI<StudentDTO>();
+            var responseApi = new ResponseApi<StudentDTO>();
             var studentDto = new StudentDTO();
             
             
@@ -160,7 +161,7 @@ namespace BachCrud.Server.Controllers
         [Route("Edit/{id:int}")]
         public async Task<IActionResult> Edit(StudentDTO studentDto, int id)
         {
-            var responseApi = new ResponseAPI<int>(); 
+            var responseApi = new ResponseApi<int>(); 
             
 
             try
@@ -214,7 +215,7 @@ namespace BachCrud.Server.Controllers
         public async Task<IActionResult> Delete(int id)
         {
 
-            var responseApi = new ResponseAPI<int>();
+            var responseApi = new ResponseApi<int>();
 
             try
             {

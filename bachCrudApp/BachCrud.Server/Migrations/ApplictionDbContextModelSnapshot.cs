@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BachCrud.Server.Migrations
 {
-    [DbContext(typeof(ApplictionDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class ApplictionDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

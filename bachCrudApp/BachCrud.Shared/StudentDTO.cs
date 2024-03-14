@@ -1,4 +1,6 @@
-namespace BlazorCrud.Shared;
+using BlazorCrud.Shared;
+
+namespace BachCrud.Shared;
 
 public class StudentDTO
 {

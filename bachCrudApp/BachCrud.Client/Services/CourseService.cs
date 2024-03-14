@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using BachCrud.Client.Services.Contracts;
+using BachCrud.Shared;
 using BlazorCrud.Shared;
 
 namespace BachCrud.Client.Services;
@@ -16,7 +17,7 @@ public class CourseService : ICourseService
     public async Task<List<CourseDTO>> List()
     {
         
-        var result = await _httpClient.GetFromJsonAsync<ResponseAPI<List<CourseDTO>>>("api/Course/AllCourses");
+        var result = await _httpClient.GetFromJsonAsync<ResponseApi<List<CourseDTO>>>("api/Course/AllCourses");
 
         if (result!.IsSuccess)
         {

@@ -11,8 +11,7 @@ public class ApplictionDbContext : DbContext
         
     }
     
-    public virtual DbSet<Employee> Employees { get; set;  }
-    public virtual DbSet<Department> Departments { get; set; }
+  
     public virtual DbSet<Student> Students { get; set; }
     public virtual DbSet<Course>  Courses{ get; set; }
 
@@ -21,48 +20,7 @@ public class ApplictionDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-
-        modelBuilder.Entity<Employee>().HasData(new Employee
-        {
-            Id= 1,
-            FullName = "knaan Mohamed",
-            HireData = DateTime.Now,
-            Salary = 98,
-            DepartmentId = 1
-
-
-        }); 
         
-        modelBuilder.Entity<Employee>().HasData(new Employee
-        {
-            Id = 2,
-            FullName = "knaan Mohamed",
-            HireData = DateTime.Now,
-            Salary = 98,
-           DepartmentId = 2
-
-
-        }); 
-        
-        modelBuilder.Entity<Department>().HasData(new Department
-        {
-           Id = 1, 
-           Name = "HR",
-
-
-        }); 
-        
-        modelBuilder.Entity<Department>().HasData(new Department
-        {
-            Id = 2, 
-            Name = "IT",
-
-
-        });
-
-
-
-
 
         modelBuilder.Entity<Student>().HasData(new Student
         {

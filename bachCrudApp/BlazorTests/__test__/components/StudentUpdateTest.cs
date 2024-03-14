@@ -46,7 +46,7 @@ public class StudentUpdateTest : TestContext
         Services.AddSingleton<ICourseService>(mockCourseService.Object);
 
         // Act
-        var component = RenderComponent<Student>(parameters => parameters.Add(p => p.studentId, existingStudent.Id));
+        var component = RenderComponent<Student>(parameters => parameters.Add(p => p.StudentId, existingStudent.Id));
         
         component.Find("#firstName").Change("kate");
         component.Find("#lastName").Change("TestUpdate");

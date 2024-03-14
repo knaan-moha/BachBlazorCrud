@@ -10,9 +10,24 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with: 
+          dotnet-version: '8.0.101'
+      - name: Restore dependencies for BlazorTests 
+        run:  dotnet restore bachCrudApp/BlazorTests/BlazorTests.csproj
+
+      - name: Run Blazor Tests 
+        run: dotnet test bachCrudApp/BlazorTests/BlazorTests.csproj --no-restore --verbosity normal
+
   build:
     runs-on: windows-latest
-
+    needs: test
     steps:
       - uses: actions/checkout@v4
 

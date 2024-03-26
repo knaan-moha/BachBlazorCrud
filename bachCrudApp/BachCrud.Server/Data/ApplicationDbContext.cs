@@ -70,6 +70,98 @@ public class ApplicationDbContext : DbContext
                                                              
                                                              
         });
+        modelBuilder.Entity<Student>().HasData(new Student          
+        {                                                           
+            Id = 4,                                                 
+            FirstName = "Mo",                                     
+            LastName = "Ali",                                   
+            Email = "mo@uia.no",                                 
+            PhoneNumber = "004348",
+            Age = 25,
+            RegistrationDate = DateTime.Today,                      
+            CourseId = 2                                            
+                                                             
+                                                             
+                                                             
+        });
+
+        var numberOfStudentsData = 20;
+        var students = new List<Student>();
+        var random = new Random(); 
+        
+        var firstNames = new List<string>
+        {
+            "Alisa",
+            "Alisia",
+            "Alisain",
+            "Alex ",
+            "Alita",
+            "Alix",
+            "Aliza",
+            "Alla",
+            "Allan",
+            "Alleen",
+            "Allegra",
+            "Allen",
+            "Allen",
+            "Allena",
+            "Allene",
+            "Allie",
+            "Alline",
+            "Allison",
+            "Allyn",
+            "Allyson",
+           
+        };
+        var lastNames = new List<string>
+        {
+            "Buffy",
+            "Buford",
+            "Bula",
+            "Bulah",
+            "Bunny",
+            "Burl",
+            "Burma",
+            "Burt",
+            "Burton",
+            "Buster",
+            "Byron",
+            "Caitlin",
+            "Caitlyn",
+            "Calandra",
+            "Caleb",
+            "Calista",
+            "Callie",
+            "Calvin",
+            "Camelia",
+            "Camellia",
+
+            
+        };
+
+        for (int i = 1; i <= numberOfStudentsData; i++)
+        {
+            var firstNameIndex = random.Next(firstNames.Count);
+            var lastNameIndex = random.Next(lastNames.Count);
+            var firstName = firstNames[firstNameIndex];
+            var lastName = lastNames[lastNameIndex];
+            var age = random.Next(18, 45); 
+            
+            students.Add(new Student
+            {
+                Id = 4 + i, 
+                FirstName = firstName, 
+                LastName = lastName, 
+                Email = $"{firstName.ToLower()}{i}@uia.no", 
+                Age = age, 
+                PhoneNumber = $"486797{i}",
+                RegistrationDate = DateTime.Today, 
+                CourseId = random.Next(1, 4), 
+            });
+            
+        }
+        
+        modelBuilder.Entity<Student>().HasData(students); 
 
         modelBuilder.Entity<Course>().HasData(new Course
         {

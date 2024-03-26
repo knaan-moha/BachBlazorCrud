@@ -4,7 +4,7 @@
 @using BachCrud.Shared
 @inject IStudentService StudentService;
 
-@if (listStudnts == null)
+@if (_listStudnts == null)
 {
     <div class="text-center ">
        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -33,7 +33,7 @@ else
             </thead>
             <tbody>
 
-            @foreach (var item in listStudnts)
+            @foreach (var item in _listStudnts)
             {
 
                 <tr>
@@ -72,11 +72,11 @@ else
 @code {
 
 
-    List<StudentDTO> listStudnts;
+    List<StudentDTO> _listStudnts;
 
     protected override async Task OnInitializedAsync()
     {
-        listStudnts = await StudentService.AllStudents();
+        _listStudnts = await StudentService.AllStudents();
     }
 
     public async Task DeleteStudent(int id)
@@ -85,7 +85,7 @@ else
 
         if (result)
         {
-            listStudnts = await StudentService.AllStudents();
+            _listStudnts = await StudentService.AllStudents();
         }
 
     }

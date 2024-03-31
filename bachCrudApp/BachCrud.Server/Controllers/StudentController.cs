@@ -3,6 +3,7 @@ using BachCrud.Shared;
 using BlazorCrud.Server.Respositories;
 using BlazorCrud.Shared;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.Hosting;
 
 namespace BachCrud.Server.Controllers
 {
@@ -28,7 +29,7 @@ namespace BachCrud.Server.Controllers
             {
                 var students = await _studentRepository.GetStudents();
                 // make linkQ to iteret over and convert to list 
-                var studentDtoList = students.Select(item => new StudentDTO
+                var studentDtoList = students.OrderByDescending(item => item.RegistrationDate).Select(item => new StudentDTO
                 {
                     
                     Id = item.Id, 

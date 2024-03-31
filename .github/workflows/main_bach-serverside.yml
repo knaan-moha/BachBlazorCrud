@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release bachCrudApp/BachCrud.sln
 
       - name: dotnet publish
-        run: publish bachCrudApp/BachCrud.Server//BachCrud.Server.csproj -c Release -o ./myapp
+        run: dotnet publish bachCrudApp/BachCrud.Server/BachCrud.Server.csproj -c Release -o ./myapp
 
 
       - name: Upload artifact for deployment job

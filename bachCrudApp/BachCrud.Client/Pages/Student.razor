@@ -15,17 +15,19 @@
         <DataAnnotationsValidator></DataAnnotationsValidator>
 
 
+        
         <div class="form-group row">
-
             <div class="col-md-4">
                 <label class="form-label">First Name</label>
                 <InputText id="firstName" class="form-control" @bind-Value="_student.FirstName"></InputText>
             </div>
-
+            
             <div class="col-md-4">
                 <label class="form-label">Last Name</label>
                 <InputText id="lastName" class="form-control" @bind-Value="_student.LastName"></InputText>
             </div>
+        </div>
+                                  
             <div class="form-group row">
                 <div class="col-md-8">
                     <label class="form-label">Email</label>
@@ -42,14 +44,14 @@
                     <InputText id="phoneNumber" class="form-control" @bind-Value="_student.PhoneNumber"></InputText>
                 </div>
             </div>
-
+            <div class="form-group row">
             <div class="col-md-4">
-                <label class="form-label">Register Date</label>
+                <label class="form-label">Registration Date</label>
                 <InputDate id="Register" class="form-control" @bind-Value="_student.RegistrationDate"></InputDate>
             </div>
             <div class="col-md-4">
 
-                <label class="form-label">Courses</label>
+                <label class="form-label">Course</label>
                 <InputSelect class="form-select" @bind-Value="_student.CourseId">
                     <option value="0">---Select--- </option>
                     @foreach (var item in _listCourseDtos)
@@ -61,11 +63,8 @@
                 </InputSelect>
 
             </div>
-
-
-
-
-        </div>
+            
+            </div>
         <button type="submit" class="btn btn-primary mt-3 me-2">@_btnText</button>
         <a class="btn btn-warning mt-3 me-2" href="/">Back</a>
 

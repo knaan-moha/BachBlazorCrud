@@ -29,7 +29,7 @@ namespace BachCrud.Server.Controllers
             {
                 var students = await _studentRepository.GetStudents();
                 // make linkQ to iteret over and convert to list 
-                var studentDtoList = students.OrderByDescending(item => item.RegistrationDate).Select(item => new StudentDTO
+                var studentDtoList = students.OrderByDescending(item => item.Id).Select(item => new StudentDTO
                 {
                     
                     Id = item.Id, 

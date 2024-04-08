@@ -4,6 +4,7 @@ using BachCrud.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BachCrud.Server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240405101127_trialsDb")]
+    partial class trialsDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,230 +112,230 @@ namespace BachCrud.Server.Migrations
                         new
                         {
                             Id = 5,
-                            Age = 32,
-                            CourseId = 3,
-                            Email = "alix1@uia.no",
-                            FirstName = "Alix",
-                            LastName = "Calvin",
+                            Age = 43,
+                            CourseId = 1,
+                            Email = "moody1@uia.no",
+                            FirstName = "Moody",
+                            LastName = "Joe",
                             PhoneNumber = "4867971",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 6,
-                            Age = 43,
+                            Age = 19,
                             CourseId = 3,
-                            Email = "baxster2@uia.no",
-                            FirstName = "Baxster",
-                            LastName = "Thomas",
+                            Email = "alisa2@uia.no",
+                            FirstName = "Alisa",
+                            LastName = "Nathan",
                             PhoneNumber = "4867972",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 7,
-                            Age = 26,
-                            CourseId = 1,
-                            Email = "jenson3@uia.no",
-                            FirstName = "Jenson",
-                            LastName = "Burma",
+                            Age = 21,
+                            CourseId = 3,
+                            Email = "trussel3@uia.no",
+                            FirstName = "Trussel",
+                            LastName = "Buffy",
                             PhoneNumber = "4867973",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 8,
-                            Age = 23,
-                            CourseId = 2,
-                            Email = "reamer4@uia.no",
-                            FirstName = "Reamer",
-                            LastName = "Aaron",
+                            Age = 35,
+                            CourseId = 3,
+                            Email = "schlicht4@uia.no",
+                            FirstName = "Schlicht",
+                            LastName = "Joe",
                             PhoneNumber = "4867974",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 9,
-                            Age = 37,
-                            CourseId = 1,
-                            Email = "davis5@uia.no",
-                            FirstName = "Davis",
-                            LastName = "Calvin",
+                            Age = 43,
+                            CourseId = 3,
+                            Email = "allen5@uia.no",
+                            FirstName = "Allen",
+                            LastName = "Camelia",
                             PhoneNumber = "4867975",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 10,
-                            Age = 43,
-                            CourseId = 1,
-                            Email = "weinstein6@uia.no",
-                            FirstName = "Weinstein",
-                            LastName = "Burt",
+                            Age = 44,
+                            CourseId = 2,
+                            Email = "roberts6@uia.no",
+                            FirstName = "Roberts",
+                            LastName = "Ty",
                             PhoneNumber = "4867976",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 11,
-                            Age = 22,
-                            CourseId = 1,
-                            Email = "pettigrew7@uia.no",
-                            FirstName = "Pettigrew",
-                            LastName = "Caitlin",
+                            Age = 26,
+                            CourseId = 3,
+                            Email = "lepage7@uia.no",
+                            FirstName = "LePage",
+                            LastName = "Camellia",
                             PhoneNumber = "4867977",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 12,
-                            Age = 19,
-                            CourseId = 2,
-                            Email = "allyson8@uia.no",
-                            FirstName = "Allyson",
-                            LastName = "Thomas",
+                            Age = 34,
+                            CourseId = 1,
+                            Email = "mccormack8@uia.no",
+                            FirstName = "McCormack",
+                            LastName = "Calista",
                             PhoneNumber = "4867978",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 13,
-                            Age = 26,
-                            CourseId = 1,
-                            Email = "norquist9@uia.no",
-                            FirstName = "Norquist",
-                            LastName = "Buster",
+                            Age = 19,
+                            CourseId = 3,
+                            Email = "boyd9@uia.no",
+                            FirstName = "Boyd",
+                            LastName = "Larry",
                             PhoneNumber = "4867979",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 14,
-                            Age = 21,
+                            Age = 38,
                             CourseId = 1,
-                            Email = "moore10@uia.no",
-                            FirstName = "Moore",
-                            LastName = "Paul",
+                            Email = "lawless10@uia.no",
+                            FirstName = "Lawless",
+                            LastName = "Monte",
                             PhoneNumber = "48679710",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 15,
-                            Age = 36,
-                            CourseId = 3,
-                            Email = "tapia11@uia.no",
-                            FirstName = "Tapia",
-                            LastName = "Ike",
+                            Age = 41,
+                            CourseId = 1,
+                            Email = "fletcher11@uia.no",
+                            FirstName = "Fletcher",
+                            LastName = "Jack",
                             PhoneNumber = "48679711",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 16,
-                            Age = 28,
+                            Age = 33,
                             CourseId = 3,
-                            Email = "martin12@uia.no",
-                            FirstName = "Martin",
-                            LastName = "Calista",
+                            Email = "sellon12@uia.no",
+                            FirstName = "Sellon",
+                            LastName = "Roger",
                             PhoneNumber = "48679712",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 17,
-                            Age = 24,
-                            CourseId = 1,
-                            Email = "ebner13@uia.no",
-                            FirstName = "Ebner",
-                            LastName = "Roger",
+                            Age = 40,
+                            CourseId = 2,
+                            Email = "anderson13@uia.no",
+                            FirstName = "Anderson",
+                            LastName = "David",
                             PhoneNumber = "48679713",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 18,
-                            Age = 35,
-                            CourseId = 3,
-                            Email = "vail14@uia.no",
-                            FirstName = "Vail",
-                            LastName = "Burt",
+                            Age = 44,
+                            CourseId = 2,
+                            Email = "allyn14@uia.no",
+                            FirstName = "Allyn",
+                            LastName = "Caleb",
                             PhoneNumber = "48679714",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 19,
-                            Age = 33,
-                            CourseId = 2,
-                            Email = "myers15@uia.no",
-                            FirstName = "Myers",
-                            LastName = "Carl",
+                            Age = 36,
+                            CourseId = 3,
+                            Email = "chapman15@uia.no",
+                            FirstName = "Chapman",
+                            LastName = "Paul",
                             PhoneNumber = "48679715",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 20,
-                            Age = 32,
+                            Age = 39,
                             CourseId = 2,
-                            Email = "weinstein16@uia.no",
-                            FirstName = "Weinstein",
-                            LastName = "Ben",
+                            Email = "solberg16@uia.no",
+                            FirstName = "Solberg",
+                            LastName = "Byron",
                             PhoneNumber = "48679716",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 21,
-                            Age = 19,
+                            Age = 44,
                             CourseId = 3,
                             Email = "tiernan17@uia.no",
                             FirstName = "Tiernan",
-                            LastName = "Ben",
+                            LastName = "Edward",
                             PhoneNumber = "48679717",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 22,
-                            Age = 43,
+                            Age = 35,
                             CourseId = 3,
-                            Email = "deitz18@uia.no",
-                            FirstName = "Deitz",
-                            LastName = "Steve",
+                            Email = "reamer18@uia.no",
+                            FirstName = "Reamer",
+                            LastName = "Ben",
                             PhoneNumber = "48679718",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 23,
-                            Age = 34,
-                            CourseId = 3,
-                            Email = "mccormack19@uia.no",
-                            FirstName = "McCormack",
-                            LastName = "Frank",
+                            Age = 21,
+                            CourseId = 2,
+                            Email = "tisler19@uia.no",
+                            FirstName = "Tisler",
+                            LastName = "John",
                             PhoneNumber = "48679719",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 24,
-                            Age = 40,
-                            CourseId = 1,
-                            Email = "tiernan20@uia.no",
-                            FirstName = "Tiernan",
-                            LastName = "Callie",
+                            Age = 20,
+                            CourseId = 2,
+                            Email = "celedon20@uia.no",
+                            FirstName = "Celedon",
+                            LastName = "Walter",
                             PhoneNumber = "48679720",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 25,
-                            Age = 24,
-                            CourseId = 3,
-                            Email = "kaskel21@uia.no",
-                            FirstName = "Kaskel",
+                            Age = 26,
+                            CourseId = 2,
+                            Email = "schutz21@uia.no",
+                            FirstName = "Schutz",
                             LastName = "Joe",
                             PhoneNumber = "48679721",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
@@ -340,77 +343,77 @@ namespace BachCrud.Server.Migrations
                         new
                         {
                             Id = 26,
-                            Age = 21,
-                            CourseId = 1,
-                            Email = "sweeney22@uia.no",
-                            FirstName = "Sweeney",
-                            LastName = "Walter",
+                            Age = 36,
+                            CourseId = 3,
+                            Email = "allyn22@uia.no",
+                            FirstName = "Allyn",
+                            LastName = "Fred",
                             PhoneNumber = "48679722",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 27,
-                            Age = 30,
+                            Age = 39,
                             CourseId = 2,
-                            Email = "bauer23@uia.no",
-                            FirstName = "Bauer",
-                            LastName = "Carl",
+                            Email = "eastman23@uia.no",
+                            FirstName = "Eastman",
+                            LastName = "Roger",
                             PhoneNumber = "48679723",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 28,
-                            Age = 29,
-                            CourseId = 1,
-                            Email = "alisain24@uia.no",
-                            FirstName = "Alisain",
-                            LastName = "George",
+                            Age = 20,
+                            CourseId = 3,
+                            Email = "root24@uia.no",
+                            FirstName = "Root",
+                            LastName = "Fred",
                             PhoneNumber = "48679724",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 29,
-                            Age = 32,
+                            Age = 29,
                             CourseId = 1,
-                            Email = "alisia25@uia.no",
-                            FirstName = "Alisia",
-                            LastName = "Burt",
+                            Email = "nuttle25@uia.no",
+                            FirstName = "Nuttle",
+                            LastName = "Camellia",
                             PhoneNumber = "48679725",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 30,
-                            Age = 30,
+                            Age = 21,
                             CourseId = 1,
-                            Email = "bauer26@uia.no",
-                            FirstName = "Bauer",
-                            LastName = "Calandra",
+                            Email = "uddin26@uia.no",
+                            FirstName = "Uddin",
+                            LastName = "Frank",
                             PhoneNumber = "48679726",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 31,
-                            Age = 28,
-                            CourseId = 2,
-                            Email = "deitz27@uia.no",
-                            FirstName = "Deitz",
-                            LastName = "Burl",
+                            Age = 25,
+                            CourseId = 1,
+                            Email = "soulis27@uia.no",
+                            FirstName = "Soulis",
+                            LastName = "Ty",
                             PhoneNumber = "48679727",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 32,
-                            Age = 40,
-                            CourseId = 3,
-                            Email = "keller28@uia.no",
-                            FirstName = "Keller",
-                            LastName = "Calista",
+                            Age = 34,
+                            CourseId = 2,
+                            Email = "tandy28@uia.no",
+                            FirstName = "Tandy",
+                            LastName = "Aaron",
                             PhoneNumber = "48679728",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
@@ -418,21 +421,21 @@ namespace BachCrud.Server.Migrations
                         {
                             Id = 33,
                             Age = 31,
-                            CourseId = 3,
-                            Email = "roberts29@uia.no",
-                            FirstName = "Roberts",
-                            LastName = "Camellia",
+                            CourseId = 2,
+                            Email = "wagner29@uia.no",
+                            FirstName = "Wagner",
+                            LastName = "Burt",
                             PhoneNumber = "48679729",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 34,
-                            Age = 35,
+                            Age = 21,
                             CourseId = 3,
-                            Email = "chambers30@uia.no",
-                            FirstName = "Chambers",
-                            LastName = "Hal",
+                            Email = "trussel30@uia.no",
+                            FirstName = "Trussel",
+                            LastName = "Dan",
                             PhoneNumber = "48679730",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
@@ -440,593 +443,593 @@ namespace BachCrud.Server.Migrations
                         {
                             Id = 35,
                             Age = 18,
-                            CourseId = 1,
-                            Email = "keller31@uia.no",
-                            FirstName = "Keller",
-                            LastName = "Calandra",
+                            CourseId = 3,
+                            Email = "allen31@uia.no",
+                            FirstName = "Allen",
+                            LastName = "Burl",
                             PhoneNumber = "48679731",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 36,
-                            Age = 36,
-                            CourseId = 2,
-                            Email = "turco32@uia.no",
-                            FirstName = "Turco",
-                            LastName = "Fred",
+                            Age = 29,
+                            CourseId = 1,
+                            Email = "sweeney32@uia.no",
+                            FirstName = "Sweeney",
+                            LastName = "Larry",
                             PhoneNumber = "48679732",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 37,
-                            Age = 29,
+                            Age = 35,
                             CourseId = 1,
-                            Email = "jones33@uia.no",
-                            FirstName = "Jones",
-                            LastName = "Camelia",
+                            Email = "alla33@uia.no",
+                            FirstName = "Alla",
+                            LastName = "Edward",
                             PhoneNumber = "48679733",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 38,
-                            Age = 38,
+                            Age = 32,
                             CourseId = 1,
-                            Email = "allyson34@uia.no",
-                            FirstName = "Allyson",
-                            LastName = "David",
+                            Email = "pak34@uia.no",
+                            FirstName = "Pak",
+                            LastName = "Hank",
                             PhoneNumber = "48679734",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 39,
-                            Age = 18,
+                            Age = 32,
                             CourseId = 1,
-                            Email = "ferry35@uia.no",
-                            FirstName = "Ferry",
-                            LastName = "Otto",
+                            Email = "lewis35@uia.no",
+                            FirstName = "Lewis",
+                            LastName = "Caitlin",
                             PhoneNumber = "48679735",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 40,
-                            Age = 32,
-                            CourseId = 1,
-                            Email = "schwager36@uia.no",
-                            FirstName = "Schwager",
-                            LastName = "Edward",
+                            Age = 21,
+                            CourseId = 2,
+                            Email = "allen36@uia.no",
+                            FirstName = "Allen",
+                            LastName = "Buford",
                             PhoneNumber = "48679736",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 41,
-                            Age = 30,
-                            CourseId = 2,
-                            Email = "dugan37@uia.no",
-                            FirstName = "Dugan",
-                            LastName = "Monte",
+                            Age = 42,
+                            CourseId = 3,
+                            Email = "yates37@uia.no",
+                            FirstName = "Yates",
+                            LastName = "Walter",
                             PhoneNumber = "48679737",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 42,
-                            Age = 37,
-                            CourseId = 2,
-                            Email = "rogers38@uia.no",
-                            FirstName = "Rogers",
-                            LastName = "Ike",
+                            Age = 22,
+                            CourseId = 1,
+                            Email = "soloman38@uia.no",
+                            FirstName = "Soloman",
+                            LastName = "Victor",
                             PhoneNumber = "48679738",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 43,
-                            Age = 19,
+                            Age = 37,
                             CourseId = 1,
-                            Email = "trussel39@uia.no",
-                            FirstName = "Trussel",
-                            LastName = "Burl",
+                            Email = "ashwoon39@uia.no",
+                            FirstName = "Ashwoon",
+                            LastName = "Paul",
                             PhoneNumber = "48679739",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 44,
-                            Age = 29,
+                            Age = 34,
                             CourseId = 2,
-                            Email = "johnsen40@uia.no",
-                            FirstName = "Johnsen",
-                            LastName = "Caitlyn",
+                            Email = "alleen40@uia.no",
+                            FirstName = "Alleen",
+                            LastName = "Bula",
                             PhoneNumber = "48679740",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 45,
-                            Age = 30,
-                            CourseId = 2,
-                            Email = "lulloff41@uia.no",
-                            FirstName = "Lulloff",
-                            LastName = "Fred",
+                            Age = 22,
+                            CourseId = 3,
+                            Email = "allegra41@uia.no",
+                            FirstName = "Allegra",
+                            LastName = "Burl",
                             PhoneNumber = "48679741",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 46,
-                            Age = 31,
-                            CourseId = 2,
-                            Email = "jenson42@uia.no",
-                            FirstName = "Jenson",
-                            LastName = "Bula",
+                            Age = 34,
+                            CourseId = 3,
+                            Email = "jagtap42@uia.no",
+                            FirstName = "Jagtap",
+                            LastName = "Dan",
                             PhoneNumber = "48679742",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 47,
-                            Age = 19,
-                            CourseId = 2,
-                            Email = "sweeney43@uia.no",
-                            FirstName = "Sweeney",
-                            LastName = "Monte",
+                            Age = 28,
+                            CourseId = 1,
+                            Email = "norquist43@uia.no",
+                            FirstName = "Norquist",
+                            LastName = "Ty",
                             PhoneNumber = "48679743",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 48,
-                            Age = 34,
-                            CourseId = 2,
-                            Email = "trebil44@uia.no",
-                            FirstName = "Trebil",
-                            LastName = "Matthew",
+                            Age = 37,
+                            CourseId = 1,
+                            Email = "anderson44@uia.no",
+                            FirstName = "Anderson",
+                            LastName = "Hank",
                             PhoneNumber = "48679744",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 49,
-                            Age = 30,
-                            CourseId = 3,
-                            Email = "keller45@uia.no",
-                            FirstName = "Keller",
-                            LastName = "Roger",
+                            Age = 37,
+                            CourseId = 1,
+                            Email = "alline45@uia.no",
+                            FirstName = "Alline",
+                            LastName = "Walter",
                             PhoneNumber = "48679745",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 50,
-                            Age = 18,
+                            Age = 43,
                             CourseId = 2,
-                            Email = "schuster46@uia.no",
-                            FirstName = "Schuster",
-                            LastName = "Camelia",
+                            Email = "zeller46@uia.no",
+                            FirstName = "Zeller",
+                            LastName = "Burton",
                             PhoneNumber = "48679746",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 51,
-                            Age = 34,
-                            CourseId = 2,
-                            Email = "allyson47@uia.no",
-                            FirstName = "Allyson",
-                            LastName = "Steve",
+                            Age = 38,
+                            CourseId = 3,
+                            Email = "allen47@uia.no",
+                            FirstName = "Allen",
+                            LastName = "Victor",
                             PhoneNumber = "48679747",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 52,
-                            Age = 27,
+                            Age = 38,
                             CourseId = 2,
-                            Email = "sawyer48@uia.no",
-                            FirstName = "Sawyer",
-                            LastName = "David",
+                            Email = "kaskel48@uia.no",
+                            FirstName = "Kaskel",
+                            LastName = "Frank",
                             PhoneNumber = "48679748",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 53,
-                            Age = 29,
-                            CourseId = 3,
-                            Email = "trussel49@uia.no",
-                            FirstName = "Trussel",
-                            LastName = "George",
+                            Age = 43,
+                            CourseId = 2,
+                            Email = "trebil49@uia.no",
+                            FirstName = "Trebil",
+                            LastName = "Tim",
                             PhoneNumber = "48679749",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 54,
-                            Age = 32,
-                            CourseId = 2,
-                            Email = "moore50@uia.no",
-                            FirstName = "Moore",
-                            LastName = "David",
+                            Age = 18,
+                            CourseId = 1,
+                            Email = "allegra50@uia.no",
+                            FirstName = "Allegra",
+                            LastName = "John",
                             PhoneNumber = "48679750",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 55,
-                            Age = 37,
-                            CourseId = 1,
-                            Email = "paiser51@uia.no",
-                            FirstName = "Paiser",
-                            LastName = "Edward",
+                            Age = 31,
+                            CourseId = 3,
+                            Email = "lewis51@uia.no",
+                            FirstName = "Lewis",
+                            LastName = "Roger",
                             PhoneNumber = "48679751",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 56,
-                            Age = 21,
-                            CourseId = 2,
-                            Email = "miller52@uia.no",
-                            FirstName = "Miller",
-                            LastName = "Buster",
+                            Age = 41,
+                            CourseId = 3,
+                            Email = "deitz52@uia.no",
+                            FirstName = "Deitz",
+                            LastName = "Burl",
                             PhoneNumber = "48679752",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 57,
-                            Age = 22,
-                            CourseId = 1,
-                            Email = "bongard53@uia.no",
-                            FirstName = "Bongard",
-                            LastName = "Burl",
+                            Age = 33,
+                            CourseId = 2,
+                            Email = "aikin53@uia.no",
+                            FirstName = "Aikin",
+                            LastName = "Walter",
                             PhoneNumber = "48679753",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 58,
-                            Age = 19,
+                            Age = 24,
                             CourseId = 2,
-                            Email = "eastman54@uia.no",
-                            FirstName = "Eastman",
-                            LastName = "Mark",
+                            Email = "hylan54@uia.no",
+                            FirstName = "Hylan",
+                            LastName = "Bula",
                             PhoneNumber = "48679754",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 59,
-                            Age = 21,
-                            CourseId = 1,
-                            Email = "tapia55@uia.no",
-                            FirstName = "Tapia",
-                            LastName = "Burton",
+                            Age = 33,
+                            CourseId = 2,
+                            Email = "mcginnis55@uia.no",
+                            FirstName = "McGinnis",
+                            LastName = "Burma",
                             PhoneNumber = "48679755",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 60,
-                            Age = 39,
-                            CourseId = 2,
-                            Email = "stahl56@uia.no",
-                            FirstName = "Stahl",
-                            LastName = "Calvin",
+                            Age = 18,
+                            CourseId = 1,
+                            Email = "baxster56@uia.no",
+                            FirstName = "Baxster",
+                            LastName = "David",
                             PhoneNumber = "48679756",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 61,
-                            Age = 19,
-                            CourseId = 3,
-                            Email = "aikin57@uia.no",
-                            FirstName = "Aikin",
-                            LastName = "Aaron",
+                            Age = 26,
+                            CourseId = 1,
+                            Email = "mccord57@uia.no",
+                            FirstName = "Mccord",
+                            LastName = "Joe",
                             PhoneNumber = "48679757",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 62,
-                            Age = 34,
+                            Age = 30,
                             CourseId = 3,
-                            Email = "maki58@uia.no",
-                            FirstName = "Maki",
-                            LastName = "Bulah",
+                            Email = "soulis58@uia.no",
+                            FirstName = "Soulis",
+                            LastName = "Thomas",
                             PhoneNumber = "48679758",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 63,
-                            Age = 30,
+                            Age = 41,
                             CourseId = 3,
-                            Email = "reyes59@uia.no",
-                            FirstName = "Reyes",
-                            LastName = "Joe",
+                            Email = "soukup59@uia.no",
+                            FirstName = "Soukup",
+                            LastName = "Walter",
                             PhoneNumber = "48679759",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 64,
-                            Age = 24,
-                            CourseId = 1,
-                            Email = "shaffer60@uia.no",
-                            FirstName = "Shaffer",
-                            LastName = "Otto",
+                            Age = 38,
+                            CourseId = 2,
+                            Email = "nelson60@uia.no",
+                            FirstName = "Nelson",
+                            LastName = "Caleb",
                             PhoneNumber = "48679760",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 65,
-                            Age = 43,
-                            CourseId = 3,
-                            Email = "lewis61@uia.no",
-                            FirstName = "Lewis",
-                            LastName = "John",
+                            Age = 29,
+                            CourseId = 1,
+                            Email = "thompson61@uia.no",
+                            FirstName = "Thompson",
+                            LastName = "Calandra",
                             PhoneNumber = "48679761",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 66,
-                            Age = 35,
-                            CourseId = 3,
-                            Email = "moody62@uia.no",
-                            FirstName = "Moody",
-                            LastName = "David",
+                            Age = 29,
+                            CourseId = 2,
+                            Email = "orwig62@uia.no",
+                            FirstName = "Orwig",
+                            LastName = "Callie",
                             PhoneNumber = "48679762",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 67,
-                            Age = 25,
-                            CourseId = 1,
-                            Email = "alisia63@uia.no",
-                            FirstName = "Alisia",
-                            LastName = "Roger",
+                            Age = 32,
+                            CourseId = 3,
+                            Email = "norquist63@uia.no",
+                            FirstName = "Norquist",
+                            LastName = "Buford",
                             PhoneNumber = "48679763",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 68,
-                            Age = 31,
-                            CourseId = 3,
-                            Email = "schickowski64@uia.no",
-                            FirstName = "Schickowski",
-                            LastName = "Bulah",
+                            Age = 43,
+                            CourseId = 1,
+                            Email = "yates64@uia.no",
+                            FirstName = "Yates",
+                            LastName = "Peter",
                             PhoneNumber = "48679764",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 69,
-                            Age = 36,
+                            Age = 27,
                             CourseId = 2,
-                            Email = "reyes65@uia.no",
-                            FirstName = "Reyes",
-                            LastName = "John",
+                            Email = "haworth65@uia.no",
+                            FirstName = "Haworth",
+                            LastName = "Calista",
                             PhoneNumber = "48679765",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 70,
-                            Age = 32,
-                            CourseId = 3,
-                            Email = "doran66@uia.no",
-                            FirstName = "Doran",
-                            LastName = "Byron",
+                            Age = 28,
+                            CourseId = 2,
+                            Email = "soloman66@uia.no",
+                            FirstName = "Soloman",
+                            LastName = "Edward",
                             PhoneNumber = "48679766",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 71,
-                            Age = 42,
-                            CourseId = 3,
-                            Email = "nuttle67@uia.no",
-                            FirstName = "Nuttle",
-                            LastName = "Mark",
+                            Age = 39,
+                            CourseId = 2,
+                            Email = "bauer67@uia.no",
+                            FirstName = "Bauer",
+                            LastName = "George",
                             PhoneNumber = "48679767",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 72,
-                            Age = 44,
-                            CourseId = 2,
-                            Email = "ramachandran68@uia.no",
-                            FirstName = "Ramachandran",
-                            LastName = "Tim",
+                            Age = 30,
+                            CourseId = 1,
+                            Email = "allena68@uia.no",
+                            FirstName = "Allena",
+                            LastName = "Burt",
                             PhoneNumber = "48679768",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 73,
-                            Age = 42,
+                            Age = 21,
                             CourseId = 3,
-                            Email = "bowers69@uia.no",
-                            FirstName = "Bowers",
-                            LastName = "Ben",
+                            Email = "allegra69@uia.no",
+                            FirstName = "Allegra",
+                            LastName = "Tim",
                             PhoneNumber = "48679769",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 74,
-                            Age = 22,
-                            CourseId = 3,
-                            Email = "yates70@uia.no",
-                            FirstName = "Yates",
-                            LastName = "Calvin",
+                            Age = 28,
+                            CourseId = 1,
+                            Email = "aliza70@uia.no",
+                            FirstName = "Aliza",
+                            LastName = "Otto",
                             PhoneNumber = "48679770",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 75,
-                            Age = 41,
+                            Age = 21,
                             CourseId = 1,
-                            Email = "fletcher71@uia.no",
-                            FirstName = "Fletcher",
-                            LastName = "Bulah",
+                            Email = "irwin71@uia.no",
+                            FirstName = "Irwin",
+                            LastName = "Matthew",
                             PhoneNumber = "48679771",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 76,
-                            Age = 26,
-                            CourseId = 1,
-                            Email = "quinn72@uia.no",
-                            FirstName = "Quinn",
-                            LastName = "Bula",
+                            Age = 18,
+                            CourseId = 2,
+                            Email = "orwig72@uia.no",
+                            FirstName = "Orwig",
+                            LastName = "Ike",
                             PhoneNumber = "48679772",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 77,
-                            Age = 40,
-                            CourseId = 3,
-                            Email = "mccormack73@uia.no",
-                            FirstName = "McCormack",
-                            LastName = "Ben",
+                            Age = 41,
+                            CourseId = 1,
+                            Email = "bauer73@uia.no",
+                            FirstName = "Bauer",
+                            LastName = "Nathan",
                             PhoneNumber = "48679773",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 78,
-                            Age = 34,
+                            Age = 38,
                             CourseId = 2,
-                            Email = "pak74@uia.no",
-                            FirstName = "Pak",
-                            LastName = "Victor",
+                            Email = "quizoz74@uia.no",
+                            FirstName = "Quizoz",
+                            LastName = "Ty",
                             PhoneNumber = "48679774",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 79,
-                            Age = 44,
-                            CourseId = 3,
-                            Email = "maki75@uia.no",
-                            FirstName = "Maki",
-                            LastName = "Buster",
+                            Age = 27,
+                            CourseId = 2,
+                            Email = "tapia75@uia.no",
+                            FirstName = "Tapia",
+                            LastName = "Fred",
                             PhoneNumber = "48679775",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 80,
-                            Age = 35,
+                            Age = 18,
                             CourseId = 3,
-                            Email = "norquist76@uia.no",
-                            FirstName = "Norquist",
-                            LastName = "Caitlin",
+                            Email = "cannon76@uia.no",
+                            FirstName = "Cannon",
+                            LastName = "Buford",
                             PhoneNumber = "48679776",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 81,
-                            Age = 39,
-                            CourseId = 2,
-                            Email = "zeller77@uia.no",
-                            FirstName = "Zeller",
-                            LastName = "Joe",
+                            Age = 33,
+                            CourseId = 1,
+                            Email = "schlicht77@uia.no",
+                            FirstName = "Schlicht",
+                            LastName = "Caitlyn",
                             PhoneNumber = "48679777",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 82,
-                            Age = 32,
-                            CourseId = 3,
-                            Email = "sandstrom78@uia.no",
-                            FirstName = "Sandstrom",
-                            LastName = "Burl",
+                            Age = 21,
+                            CourseId = 2,
+                            Email = "cannon78@uia.no",
+                            FirstName = "Cannon",
+                            LastName = "Calandra",
                             PhoneNumber = "48679778",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 83,
-                            Age = 21,
+                            Age = 38,
                             CourseId = 3,
-                            Email = "shaffer79@uia.no",
-                            FirstName = "Shaffer",
-                            LastName = "Frank",
+                            Email = "soulis79@uia.no",
+                            FirstName = "Soulis",
+                            LastName = "Paul",
                             PhoneNumber = "48679779",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 84,
-                            Age = 38,
-                            CourseId = 3,
-                            Email = "weiss80@uia.no",
-                            FirstName = "Weiss",
-                            LastName = "Joe",
+                            Age = 28,
+                            CourseId = 1,
+                            Email = "ferro80@uia.no",
+                            FirstName = "Ferro",
+                            LastName = "Caitlyn",
                             PhoneNumber = "48679780",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 85,
-                            Age = 38,
+                            Age = 18,
                             CourseId = 1,
-                            Email = "hesch81@uia.no",
-                            FirstName = "Hesch",
-                            LastName = "Calista",
+                            Email = "lawicki81@uia.no",
+                            FirstName = "Lawicki",
+                            LastName = "Roger",
                             PhoneNumber = "48679781",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 86,
-                            Age = 22,
-                            CourseId = 1,
-                            Email = "ventotla82@uia.no",
-                            FirstName = "Ventotla",
-                            LastName = "Caitlin",
+                            Age = 36,
+                            CourseId = 3,
+                            Email = "bongard82@uia.no",
+                            FirstName = "Bongard",
+                            LastName = "Mark",
                             PhoneNumber = "48679782",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 87,
-                            Age = 28,
-                            CourseId = 3,
-                            Email = "ferro83@uia.no",
-                            FirstName = "Ferro",
-                            LastName = "Edward",
+                            Age = 39,
+                            CourseId = 1,
+                            Email = "kassing83@uia.no",
+                            FirstName = "Kassing",
+                            LastName = "Buffy",
                             PhoneNumber = "48679783",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 88,
-                            Age = 43,
+                            Age = 26,
                             CourseId = 2,
-                            Email = "ventotla84@uia.no",
-                            FirstName = "Ventotla",
-                            LastName = "Burt",
+                            Email = "wakefield84@uia.no",
+                            FirstName = "Wakefield",
+                            LastName = "Matthew",
                             PhoneNumber = "48679784",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
@@ -1034,119 +1037,119 @@ namespace BachCrud.Server.Migrations
                         {
                             Id = 89,
                             Age = 31,
-                            CourseId = 3,
-                            Email = "boyd85@uia.no",
-                            FirstName = "Boyd",
-                            LastName = "Calvin",
+                            CourseId = 2,
+                            Email = "uddin85@uia.no",
+                            FirstName = "Uddin",
+                            LastName = "David",
                             PhoneNumber = "48679785",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 90,
-                            Age = 38,
-                            CourseId = 1,
-                            Email = "nugent86@uia.no",
-                            FirstName = "Nugent",
-                            LastName = "Mark",
+                            Age = 29,
+                            CourseId = 3,
+                            Email = "allie86@uia.no",
+                            FirstName = "Allie",
+                            LastName = "Victor",
                             PhoneNumber = "48679786",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 91,
-                            Age = 28,
+                            Age = 34,
                             CourseId = 2,
-                            Email = "moore87@uia.no",
-                            FirstName = "Moore",
-                            LastName = "Caitlin",
+                            Email = "yang87@uia.no",
+                            FirstName = "Yang",
+                            LastName = "Caitlyn",
                             PhoneNumber = "48679787",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 92,
-                            Age = 25,
+                            Age = 21,
                             CourseId = 2,
-                            Email = "aikin88@uia.no",
-                            FirstName = "Aikin",
-                            LastName = "Callie",
+                            Email = "davis88@uia.no",
+                            FirstName = "Davis",
+                            LastName = "Edward",
                             PhoneNumber = "48679788",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 93,
-                            Age = 18,
+                            Age = 31,
                             CourseId = 2,
-                            Email = "schuster89@uia.no",
-                            FirstName = "Schuster",
-                            LastName = "Ben",
+                            Email = "trussel89@uia.no",
+                            FirstName = "Trussel",
+                            LastName = "Matthew",
                             PhoneNumber = "48679789",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 94,
-                            Age = 24,
-                            CourseId = 2,
-                            Email = "nugent90@uia.no",
-                            FirstName = "Nugent",
-                            LastName = "Calandra",
+                            Age = 35,
+                            CourseId = 3,
+                            Email = "pak90@uia.no",
+                            FirstName = "Pak",
+                            LastName = "David",
                             PhoneNumber = "48679790",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 95,
-                            Age = 22,
-                            CourseId = 1,
-                            Email = "dewalt91@uia.no",
-                            FirstName = "Dewalt",
-                            LastName = "Calvin",
+                            Age = 41,
+                            CourseId = 2,
+                            Email = "olson91@uia.no",
+                            FirstName = "Olson",
+                            LastName = "Mark",
                             PhoneNumber = "48679791",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 96,
-                            Age = 40,
-                            CourseId = 3,
-                            Email = "alix92@uia.no",
-                            FirstName = "Alix",
-                            LastName = "Callie",
+                            Age = 24,
+                            CourseId = 1,
+                            Email = "caswell92@uia.no",
+                            FirstName = "Caswell",
+                            LastName = "Victor",
                             PhoneNumber = "48679792",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 97,
-                            Age = 40,
-                            CourseId = 3,
-                            Email = "quinn93@uia.no",
-                            FirstName = "Quinn",
-                            LastName = "Roger",
+                            Age = 26,
+                            CourseId = 1,
+                            Email = "allie93@uia.no",
+                            FirstName = "Allie",
+                            LastName = "Calista",
                             PhoneNumber = "48679793",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 98,
-                            Age = 21,
-                            CourseId = 3,
-                            Email = "dewalt94@uia.no",
-                            FirstName = "Dewalt",
-                            LastName = "George",
+                            Age = 33,
+                            CourseId = 1,
+                            Email = "baxster94@uia.no",
+                            FirstName = "Baxster",
+                            LastName = "Walter",
                             PhoneNumber = "48679794",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         },
                         new
                         {
                             Id = 99,
-                            Age = 35,
+                            Age = 20,
                             CourseId = 1,
-                            Email = "turco95@uia.no",
-                            FirstName = "Turco",
+                            Email = "mcginnis95@uia.no",
+                            FirstName = "McGinnis",
                             LastName = "Nathan",
                             PhoneNumber = "48679795",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
@@ -1154,11 +1157,11 @@ namespace BachCrud.Server.Migrations
                         new
                         {
                             Id = 100,
-                            Age = 27,
+                            Age = 29,
                             CourseId = 1,
-                            Email = "frick96@uia.no",
-                            FirstName = "Frick",
-                            LastName = "Caleb",
+                            Email = "weiss96@uia.no",
+                            FirstName = "Weiss",
+                            LastName = "Mark",
                             PhoneNumber = "48679796",
                             RegistrationDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Local)
                         });

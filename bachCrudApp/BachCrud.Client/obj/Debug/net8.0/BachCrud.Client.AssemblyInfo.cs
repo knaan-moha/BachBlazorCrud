@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BachCrud.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a56a2daae0cc4728d9a929faca7aba2ce2bafb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78307267181a36a405690a89e923eeb579a21206")]
 [assembly: System.Reflection.AssemblyProductAttribute("BachCrud.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BachCrud.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

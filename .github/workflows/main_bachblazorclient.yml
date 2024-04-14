@@ -19,8 +19,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with: 
           dotnet-version: '8.0.101'
-      - name: Install required workloads
-        run: dotnet workload install wasm-tools
+      
       - name: Restore dependencies for BlazorTests 
         run:  dotnet restore bachCrudApp/BlazorTests/BlazorTests.csproj
       - name: Run Blazor Tests 
@@ -37,8 +36,7 @@ jobs:
         with:
           dotnet-version: '8.0.101'
           include-prerelease: true
-      - name: Install wasm-tools workload
-        run: dotnet workload install wasm-tools
+     
 
       - name: Build with dotnet
         run: dotnet build --configuration Release bachCrudApp/BachCrud.sln
